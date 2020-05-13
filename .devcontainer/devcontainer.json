@@ -1,0 +1,27 @@
+// For format details, see https://aka.ms/vscode-remote/devcontainer.json or this file's README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.117.0/containers/javascript-node-12
+{
+	"name": "${localWorkspaceFolderBasename}",
+
+	"dockerComposeFile": "docker-compose.devcontainer.yml",
+  	"service": "app",
+  	"shutdownAction": "stopCompose",
+
+	// Set *default* container specific settings.json values on container create.
+	"settings": { 
+		"terminal.integrated.shell.linux": "/bin/bash"
+	},
+
+	"workspaceFolder": "/home/node/project",
+
+	"extensions": [
+		"esbenp.prettier-vscode",
+		"dbaeumer.vscode-eslint",
+		"mikestead.dotenv",
+		"ronnidc.nunjucks",
+		"cpylua.language-postcss",
+		"okitavera.vscode-nunjucks-formatter"
+	],
+
+	"remoteUser": "node",
+}
